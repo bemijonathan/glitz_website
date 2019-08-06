@@ -1,13 +1,11 @@
 <template>
     <section>
         <div class="banner">
-
         </div>
         <div class="jumbotron">
             <div class="jumbotron-flex">
                 <div>
                     <img src="../assets/about.png"/>
-                   
                 </div>
                 <div class="about-text">
                     <h2>
@@ -32,8 +30,9 @@ export default {
 .banner {
     max-width: 1440px;
     height:860px;
-    background-image:url('../assets/banner.png'); 
+    background-image:url('../assets/banner.jpg'); 
     background-size: cover;
+    background-attachment: fixed;
     background-position: center;
     
     /* margin-top: -60px; */
@@ -47,7 +46,7 @@ export default {
     width: 100%;
     background: rgba(0, 0, 0, 0.932);
     min-height: 438px;
-    margin: -100px auto 0 auto;
+    margin: 30px auto 0 auto;
     border-radius: 10px;
 }
 .jumbotron-flex{
