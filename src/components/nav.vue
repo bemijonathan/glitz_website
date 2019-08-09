@@ -32,6 +32,9 @@ export default {
 </script>
 
 <style>
+a.navbar-item{
+    color:black !important;
+}
 .transparent{
     background:transparent !important;
     position: fixed !important;
