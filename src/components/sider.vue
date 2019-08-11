@@ -1,11 +1,9 @@
 <template>
-  <div class="slider">
+  <div class="slider" ref="slider" @scroll="sliding">
     <h3 align="center">PORTFOLIO</h3>
     <div class="slider-holder container">
-      <div class="slides">
-        <div class="single_slide" v-for=" (slide, index) in slider" :key="index" style="height: auto" :style="'background-image : url(' + slide.img + ')'">
-          
-        </div>
+      <div v-for="(slide, index) in 10 " :key="index" img :class="{'hide': index === counter}">
+        <!-- <img :src="slide.img"/> gleit -->
       </div>
     </div>
   </div>
@@ -15,20 +13,22 @@
 export default {
   data() {
     return {
-      slider: [
-        { img: "/images/about.png", link: "bags.com" },
-        { img: "/images/about.png", link: "bags.com" },
-        { img: "/images/about.png", link: "bags.com" },
-        { img: "/images/about.png", link: "bags.com" },
-        { img: "/images/about.png", link: "bags.com" },
-        { img: "/images/about.png", link: "bags.com" }
-      ]
+      counter: 0,
     };
+  },
+  methods:{
+    sliding(){
+      console.log(this.counter)
+      this.counter+=1
+    }
   }
 };
 </script>
 
 <style>
+.hide{
+  opacity: 0;
+}
 .slides {
   display: grid;
   grid-template-columns: 700px 700px 700px 700px 700px 700px ; 
@@ -36,6 +36,12 @@ export default {
   grid-gap: 100px;
   max-width:950px;
   margin: auto;
+}
+[img] {
+  height: 80vh;
+  background: green;
+  margin-bottom: 100px;
+  cursor: url('https://1.bp.blogspot.com/-Cn01291Hy9w/WLuhGT70iBI/AAAAAAAAVBY/4vDEYJKBWOYcBsmCEjhEfZ5m9TSHaaT-gCLcB/s1600/dreamer-emoji.gif') !important;
 }
 .slides::-webkit-scrollbar {    display: hidden;}
 .single_slide {
@@ -47,7 +53,8 @@ export default {
     margin: 30px;
 }
 .slider {
-  min-height: 300px;
+  height: 100vh;
+  overflow: scroll;
   background: #0000009d;
   margin-top: -100px;
 }
