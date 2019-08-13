@@ -3,32 +3,97 @@
     <div id="example container">
       <carousel-3d :inverse-scaling="1500" :space="800">
         <slide v-for="(slide, i) in slides" :key="i" :index="i">
-            <img :src="slide"/>
-          <span class="title">You know</span>
+          <img :src="slide" />
+          <span class="title" style="color:black; opacity: 1">You know</span>
           <p>You know, being a test pilot isn't always the healthiest business in the world.</p>
         </slide>
       </carousel-3d>
     </div>
+
+    <div class="line-drawing-demo">
+        <svg viewBox="0 0 280 100">
+      <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-width="1" class="lines">
+        <path
+          class="el"
+          d="M58 80V50.12C57.7 41.6 51.14 35 43 35a15 15 0 0 0 0 30h7.5v15H43a30 30 0 1 1 0-60c16.42 0 29.5 13.23 30 29.89V80H58z"
+          style="stroke-dashoffset: 0px;"
+          stroke-dasharray="316.85528564453125"
+        />
+        <path
+          class="el"
+          d="M73 80V20H58v60h15z"
+          style="stroke-dashoffset: 0px;"
+          stroke-dasharray="150"
+        />
+        <path
+          class="el"
+          d="M58 80V49.77C58.5 33.23 71.58 20 88 20a30 30 0 0 1 30 30v30h-15V50a15 15 0 0 0-15-15c-8.14 0-14.7 6.6-15 15.12V80H58zm75 0V20h-15v60h15z"
+          style="stroke-dashoffset: 0px;"
+          stroke-dasharray="441.1739501953125"
+        />
+        <path
+          class="el"
+          d="M118 80V49.77C118.5 33.23 131.58 20 148 20a30 30 0 0 1 30 30v30h-15V50a15 15 0 0 0-15-15c-8.14 0-14.7 6.6-15 15.12V80h-15zm-7.5-60a7.5 7.5 0 1 1-7.48 8v-1c.25-3.9 3.5-7 7.48-7z"
+          style="stroke-dashoffset: 0px;"
+          stroke-dasharray="338.3053894042969"
+        />
+        <path
+          class="el"
+          d="M133 65a15 15 0 0 1-15-15v-7.5h-15V50a30 30 0 0 0 30 30V65zm30 15V49.77C163.5 33.23 176.58 20 193 20a30 30 0 0 1 30 30v30h-15V50a15 15 0 0 0-15-15c-8.14 0-14.7 6.6-15 15.12V80h-15z"
+          style="stroke-dashoffset: 0px;"
+          stroke-dasharray="406.8699035644531"
+        />
+        <path
+          class="el"
+          d="M238 65a15 15 0 0 1 0-30c8.1 0 14.63 6.53 15 15h-15v15h30V49.89C267.5 33.23 254.42 20 238 20a30 30 0 0 0 0 60V65z"
+          style="stroke-dashoffset: 4.71397px;"
+          stroke-dasharray="301.8561706542969"
+        />
+        <path
+          class="el"
+          d="M260.48 65a7.5 7.5 0 1 1-7.48 8v-1c.26-3.9 3.5-7 7.48-7z"
+          style="stroke-dashoffset: 6.71611px;"
+          stroke-dasharray="47.128875732421875"
+        />
+      </g>
+    </svg>
+    </div>
+
+    
   </div>
 </template>
 
 <script>
+import anime from "animejs";
 import { Carousel3d, Slide } from "vue-carousel-3d";
 export default {
   components: {
     Carousel3d,
     Slide
   },
-  data(){
-      return{
-          slides:[
-              'https://images.pexels.com/photos/60597/dahlia-red-blossom-bloom-60597.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-              'https://images.pexels.com/photos/60597/dahlia-red-blossom-bloom-60597.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-              'https://images.pexels.com/photos/60597/dahlia-red-blossom-bloom-60597.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-              'https://images.pexels.com/photos/60597/dahlia-red-blossom-bloom-60597.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-              'https://images.pexels.com/photos/60597/dahlia-red-blossom-bloom-60597.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-          ]
-      }
+  data() {
+    return {
+      slides: [
+        "https://images.pexels.com/photos/60597/dahlia-red-blossom-bloom-60597.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+        "https://images.pexels.com/photos/60597/dahlia-red-blossom-bloom-60597.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+        "https://images.pexels.com/photos/60597/dahlia-red-blossom-bloom-60597.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+        "https://images.pexels.com/photos/60597/dahlia-red-blossom-bloom-60597.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+        "https://images.pexels.com/photos/60597/dahlia-red-blossom-bloom-60597.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+      ]
+    };
+  },
+  created() {
+    anime({
+      targets: ".line-drawing-demo .lines path",
+      strokeDashoffset: [anime.setDashoffset, 0],
+      easing: "easeInOutSine",
+      duration: 1500,
+      delay: function(el, i) {
+        return i * 250;
+      },
+      direction: "alternate",
+      loop: true
+    });
   }
 };
 </script>
