@@ -7,6 +7,7 @@
     <Banner/>
     <Slider/>
     <Input/>
+    <Flux/>
   </div>
   
 </template>
@@ -16,12 +17,14 @@ import Nav from './components/nav.vue'
 import Banner from './components/banner'
 import Slider from './components/sider'
 import Input from './components/input'
+import Flux from './components/flux'
 export default {
   components:{
     Nav,
     Banner,
     Slider,
-    Input
+    Input,
+    Flux
   }
 }
 </script>

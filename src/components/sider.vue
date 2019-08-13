@@ -3,16 +3,18 @@
     <h3 align="center">PORTFOLIO</h3>
     <div class="slider-holder container">
       <div class="slides">
-        <div class="single_slide" v-for=" (slide, index) in slider" :key="index" style="height: auto" :style="'background-image : url(' + slide.img + ')'">
-          
-        </div>
+        <Flux/>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import Flux from './flux'
 export default {
+  components:{
+    Flux
+  },
   data() {
     return {
       slider: [
@@ -30,9 +32,10 @@ export default {
 
 <style>
 .slides {
-  display: grid;
+  /* display: grid;
   grid-template-columns: 700px 700px 700px 700px 700px 700px ; 
-  overflow: auto !important;
+  overflow: auto !important; */
+  padding-bottom: 100px;
   grid-gap: 100px;
   max-width:950px;
   margin: auto;

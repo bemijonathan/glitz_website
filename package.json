@@ -11,8 +11,10 @@
     "animejs": "^3.1.0",
     "buefy": "^0.8.2",
     "core-js": "^2.6.5",
+    "hover-effect": "^1.0.5",
     "vue": "^2.6.10",
-    "vue-animejs": "^2.1.1"
+    "vue-animejs": "^2.1.1",
+    "vue-carousel-3d": "^0.2.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.10.0",
