@@ -6,20 +6,20 @@
             </b-navbar-item>
         </template>
         <template slot="end">
-            <b-navbar-item href="#">
-                Home
+            <!-- <b-navbar-item href="#">
+                <span @click="closeModal"> Home </span>
+            </b-navbar-item> -->
+            <b-navbar-item   href="#about">
+                <span @click="closeModal"> About Us </span>
             </b-navbar-item>
-            <b-navbar-item href="#">
-                About Us 
+            <b-navbar-item href="#portfolio">
+                 <span @click="closeModal"> Portfolio</span>
             </b-navbar-item>
-            <b-navbar-item href="#">
-                Portfolio
+            <b-navbar-item href="#partner">
+                 <span @click="closeModal"> Partners</span>
             </b-navbar-item>
-            <b-navbar-item href="#">
-                Partners
-            </b-navbar-item>
-            <b-navbar-item href="#">
-                Contact Us
+            <b-navbar-item href="#contact">
+                <span @click="closeModal">  Contact Us </span>
             </b-navbar-item>
         </template>
     </b-navbar>
@@ -27,7 +27,17 @@
 
 <script>
 export default {
+    data(){
+        return{
 
+        }
+    }, 
+    methods:{
+        closeModal(){
+            let close = document.querySelector('.navbar-burger.burger.is-active')
+            close.click()
+        }
+    },
 }
 </script>
 

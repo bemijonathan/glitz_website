@@ -1,3 +1,7 @@
-html{
+html, body, #app{
     scroll-behavior: smooth;
+}
+body{
+    width:100vw;
+    overflow: hidden;
 }

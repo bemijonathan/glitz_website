@@ -3,15 +3,15 @@
     <div id="example container">
       <carousel-3d :inverse-scaling="1500" :space="800">
         <slide v-for="(slide, i) in slides" :key="i" :index="i">
-          <img :src="slide" />
-          <span class="title" style="color:black; opacity: 1">You know</span>
-          <p>You know, being a test pilot isn't always the healthiest business in the world.</p>
+          <img :src="slide" width="200" />
+          <p class="title" style="color:black" align="center">You know</p>
+          <p align="center"><button class="button"> View </button></p>
         </slide>
       </carousel-3d>
     </div>
 
-    <div class="line-drawing-demo">
-        <svg viewBox="0 0 280 100">
+    <!-- <div class="line-drawing-demo">
+    <svg viewBox="0 0 280 100">
       <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-width="1" class="lines">
         <path
           class="el"
@@ -57,7 +57,7 @@
         />
       </g>
     </svg>
-    </div>
+    </div> -->
 
     
   </div>
@@ -99,4 +99,11 @@ export default {
 </script>
 
 <style>
+.carousel-3d-slide, .carousel-3d-slider[data-v-c06c963c], .carousel-3d-container{
+    height:380px !important;
+}
+.carousel-3d-slide{
+  max-width: 362px !important;
+}
+
 </style>

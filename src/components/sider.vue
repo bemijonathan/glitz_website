@@ -1,12 +1,12 @@
 <template>
-  <div class="nice-background container">
+  <div class="nice-background" id="portfolio">
     <h3 align="center" style="font-size:35px;font-weight:bolder;color:black">PORTFOLIO</h3>
     <!-- <div class="grid">
       <div class="small_box" v-for="x in 1000" :key="x"></div>
     </div>
     <div class="grid-shadow">
       <div class="small_box el" v-for="x in 1000" :key="x"></div>
-    </div> -->
+    </div>-->
     <div class="slider">
       <div class="slider-holder container">
         <div class="slides">
@@ -45,7 +45,7 @@ export default {
           { value: 1, easing: "easeInOutQuad", duration: 500 }
         ],
         delay: anime.stagger(200, { grid: [14, 150], from: "center" }),
-        loop:true
+        loop: true
       });
     }
   }
@@ -120,5 +120,70 @@ export default {
   color: black;
   font-weight: bolder;
   font-size: 38px;
+}
+
+@media screen and (max-width: 1300px) {
+  .blog_containers div {
+    width: 200px;
+  }
+  .nice-background {
+    position: relative !important;
+    min-height: 300px !important;
+    background: rgba(11, 26, 11, 0.582);
+    margin-top: 30px !important;
+  }
+  .nice-background h3 {
+    padding-top: 25px;
+  }
+  .nice-background {
+    padding: 10px;
+  }
+  form input {
+    margin-bottom: 20px;
+  }
+  #form h4 {
+    padding-top: 50px;
+  }
+  .slides {
+    padding-bottom: 0;
+  }
+  .blog_containers {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-bottom: 30px;
+    width: 100%;
+    overflow: scroll;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .navbar-menu.is-active {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+        top: 0;
+    z-index: -1;
+    padding-top: 30%;
+  }
+  .navbar-menu {
+    background-color: #000000c9 !important;
+  }
+  a.navbar-item {
+    color: white !important;
+    text-align: center;
+    margin: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.navbar-burger.burger{
+  color:white !important;
+}
+a.navbar-item:first-of-type{
+  margin: 0;
+}
+.navbar{
+  background: rgb(108, 108, 108) !important; 
+}
 }
 </style>
