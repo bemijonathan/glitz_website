@@ -28,10 +28,10 @@
         <div class="about-text">
           <h2>About Us</h2>
           <p>
-            The city of Xi’an, situated in the northwestern region of China, has long been known as the first capital of China and the resting place of the famous terra cotta soldiers. As the starting point of the Silk Road, however, the city also boasts a unique cuisine that combines Chinese and ....
-            <a
+           Glitz is Nigeria's web design and digital marketing agency proffering world class responsive website design, web development, ecommerce solutions, social media, branding and digital marketing service for any business - anywhere in Nigeria.
+            <!-- <a
               href="#"
-            >Read more</a>
+            >Read more</a> -->
           </p>
         </div>
       </div>
@@ -44,10 +44,10 @@
         <div class="about-text">
           <h2>About Us</h2>
           <p>
-            The city of Xi’an, situated in the northwestern region of China, has long been known as the first capital of China and the resting place of the famous terra cotta soldiers. As the starting point of the Silk Road, however, the city also boasts a unique cuisine that combines Chinese and ....
-            <a
+            Glitz is Nigeria's web design and digital marketing agency proffering world class responsive website design, web development, ecommerce solutions, social media, branding and digital marketing service for any business - anywhere in Nigeria.
+            <!-- <a
               href="#"
-            >Read more</a>
+            >Read more</a> -->
           </p>
         </div>
       </div>

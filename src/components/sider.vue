@@ -1,6 +1,6 @@
 <template>
   <div class="nice-background" id="portfolio">
-    <h3 align="center" style="font-size:35px;font-weight:bolder;color:black">PORTFOLIO</h3>
+    <h3 align="center" style="font-size:35px;font-weight:bolder;color:black">OUR WORK</h3>
     <!-- <div class="grid">
       <div class="small_box" v-for="x in 1000" :key="x"></div>
     </div>
