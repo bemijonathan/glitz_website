@@ -57,7 +57,7 @@ export default {
   position: relative !important;
   min-height: 300px !important;
   background: rgba(11, 26, 11, 0.582);
-  margin-top: -100px !important;
+  /* margin-top: -100px !important; */
 }
 .grid,
 .grid-shadow {

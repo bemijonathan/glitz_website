@@ -2,7 +2,7 @@
     <b-navbar class="transparent container" >
         <template slot="brand">
             <b-navbar-item href="/">
-                <img src="../assets/logo.png">
+                <img src="../assets/logo.png" width="75">
             </b-navbar-item>
         </template>
         <template slot="end">

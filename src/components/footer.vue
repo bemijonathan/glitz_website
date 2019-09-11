@@ -4,7 +4,6 @@
       <div class="container">
         <div>
           <li>About</li>
-          <li>News</li>
           <li>Blog</li>
           <li>Contact</li>
           <li></li>

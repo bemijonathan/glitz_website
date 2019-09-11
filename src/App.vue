@@ -5,6 +5,7 @@
       </Nav>
     </header>
     <Banner/>
+    <Services/>
     <Slider/>
     <span id="contact"></span>
     <Input/>
@@ -15,6 +16,7 @@
 </template>
 
 <script>
+import Services from './components/ourservices'
 import Insight from './components/insights'
 import Nav from './components/nav.vue'
 import Banner from './components/banner'
@@ -30,7 +32,8 @@ export default {
     Input,
     Flux,
     Insight,
-    Footer
+    Footer,
+    Services
   }
 }
 </script>
