@@ -76,7 +76,7 @@ export default {
   },
   created() {
     window.addEventListener("scroll", e => {
-      console.log(window.scrollY);
+      // console.log(window.scrollY);
       if (window.scrollY >= 2034) {
         this.show = true;
       } else {

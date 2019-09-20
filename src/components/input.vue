@@ -26,8 +26,8 @@ export default {
   methods: {
     submitForm() {
       if ((this.email !== "") & (this.username !== "")) {
-        console.log(this.email, "email");
-        console.log(this.username, "username");
+        // console.log(this.email, "email");
+        // console.log(this.username, "username");
       }
     }
   }
@@ -38,6 +38,7 @@ export default {
 #form {
   background-image: url("../assets/inputbanner.png");
   background-repeat: no-repeat; 
+  background-size: cover;
   min-height: 335px;
   color: white;
 }

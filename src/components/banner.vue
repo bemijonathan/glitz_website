@@ -99,13 +99,13 @@ export default {
   },
   methods: {
     submitForm() {
-      console.log({
-        name: this.username,
-        number: this.phoneNumber,
-        email: this.email,
-        title: this.title,
-        message: this.message
-      });
+      // console.log({
+      //   name: this.username,
+      //   number: this.phoneNumber,
+      //   email: this.email,
+      //   title: this.title,
+      //   message: this.message
+      // });
       this.username = ''; this.phoneNumber= ''; this.email = ""; this.title=''; this.message=''
       this.showContact = false;
     },
@@ -171,7 +171,7 @@ export default {
   },
   created() {
     window.addEventListener("scroll", e => {
-      console.log(window.scrollY);
+      // console.log(window.scrollY);
       if (window.scrollY >= 300 && window.scrollY < 1000) {
         this.show = true;
       } else {
